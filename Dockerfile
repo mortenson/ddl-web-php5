@@ -12,11 +12,11 @@ RUN pecl install xdebug-2.5.5 && docker-php-ext-enable xdebug
 RUN echo "hostname=localhost.localdomain" > /etc/ssmtp/ssmtp.conf
 RUN echo "mailhub=mailhog:1025" >> /etc/ssmtp/ssmtp.conf
 # Install Drush Launcher
-RUN curl -OL https://github.com/drush-ops/drush-launcher/releases/download/0.5.1/drush.phar && \
+RUN curl -OL https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar && \
   chmod +x drush.phar && \
   mv drush.phar /usr/local/bin/drush
 # Install a fallbck version of Drush
-RUN curl -OL https://github.com/drush-ops/drush/releases/download/8.1.15/drush.phar && \
+RUN curl -OL https://github.com/drush-ops/drush/releases/download/8.1.17/drush.phar && \
   chmod +x drush.phar && \
   mv drush.phar /usr/local/bin/drush8
 # Install Drupal Console Launcher
